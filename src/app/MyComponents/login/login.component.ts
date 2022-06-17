@@ -51,10 +51,6 @@ export class LoginComponent implements OnInit,AfterViewInit {
       this.loginStatusService.loginStatus.next(true)
       this.router.navigate(['/Home'])
     }
-    localStorage.setItem("tokenForLogin","true")
-    this.loginshow=false
-    this.loginStatusService.loginStatus.next(true)
-    this.router.navigate(['/Home'])
   }
 
 
