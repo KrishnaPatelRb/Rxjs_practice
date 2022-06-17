@@ -12,7 +12,8 @@ import { HomeComponent } from './MyComponents/home/home.component';
 import {TableModule} from 'primeng/table';
 import * as i5 from "@angular/cdk/scrolling";
 import {ButtonModule} from 'primeng/button';
-import { ROUTES }   from './app.routes';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -31,8 +32,7 @@ import { ROUTES }   from './app.routes';
     TableModule,
     ButtonModule,
   ],
-  RouterModule.forRoot(ROUTES ,{ useHash: true }),],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
