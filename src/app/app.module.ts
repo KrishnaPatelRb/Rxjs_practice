@@ -12,6 +12,7 @@ import { HomeComponent } from './MyComponents/home/home.component';
 import {TableModule} from 'primeng/table';
 import * as i5 from "@angular/cdk/scrolling";
 import {ButtonModule} from 'primeng/button';
+import { ROUTES }   from './app.routes';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import {ButtonModule} from 'primeng/button';
     TableModule,
     ButtonModule,
   ],
+  RouterModule.forRoot(ROUTES ,{ useHash: true }),],
   providers: [],
   bootstrap: [AppComponent]
 })
