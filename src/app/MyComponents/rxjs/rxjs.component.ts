@@ -66,7 +66,7 @@ export class RxjsComponent implements OnInit {
       // min                    // give minimum value from array
       // toArray()                // convert value into array
       // map(data=>data+" "+"mapmodified")          //elemet modified
-      filter(data => data === "panch")                  //element filter
+      // filter(data => data === "panch")                  //element filter
     ).subscribe(data => {
       console.log("agent3 data---", data)
     })
