@@ -1,0 +1,38 @@
+<div *ngIf="loginshow" class="main-component">
+    <h1 class="heading">This is Simple Log-In Page</h1>
+    <div class="container">
+        <div class="left-info">
+        </div>
+
+        <div class="right-info">
+            <form class="form" [formGroup]="formNamer">
+                <div>
+                    <div>
+                        <label>Username</label>
+                    </div>
+                    <input type="text" formControlName="username">
+                    <div class="show-error"
+                        *ngIf='formNamer.controls["username"].touched && formNamer.controls["username"].status==="INVALID" '>
+                        <small>Please Inter the correct Username</small>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <label>Password</label>
+                    </div>
+                    <input type="password" formControlName="password">
+                    <div class="show-error"
+                        *ngIf='formNamer.controls["password"].touched && formNamer.controls["password"].status==="INVALID" '>
+                        <small>Please Inter the correct Password</small>
+                    </div>
+                </div>
+
+                <!-- <div>Current username is- {{valueForOnchanges}}</div> -->
+                <button (click)="submit()">Submit</button>
+                <button (click)="resetform()">Reset</button>
+            </form>
+
+        </div>
+    </div>
+</div>
